@@ -89,20 +89,5 @@ public class CustomerBusiness {
             System.err.println("Mã danh mục không tồn tại");
             return;
         }
-        //Kiểm tra danh mục có sản phẩm chưa
-        boolean isCustomerExist = false;
-        for (int i = 0; i < CustomerApplication.currentCustomerIndex; i++) {
-            if (CustomerApplication.arrCustomers[i].getCustomerId() == CustomerId) {
-                isCustomerExist = true;
-                break;
-            }
-        }
-        if (isCustomerExist) {
-            System.err.println("Danh mục đã chứa sản phẩm, không thể xóa được");
-            return;
-        }
-        for (int i = indexDelete; i < CustomerApplication.currentCustomerIndex; i++) {
-            CustomerApplication.arrCustomers[i] = CustomerApplication.arrCustomers[i + 1];
-        }
-        CustomerApplication.currentCustomerIndex--;
+
     }
