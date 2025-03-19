@@ -73,21 +73,4 @@ public class CustomerBusiness {
         } while (true);
     }
 
-    public static int findIndexById(int CustomerId) {
-        for (int i = 0; i < CustomerApplication.currentCustomerIndex; i++) {
-            if (CustomerApplication.arrCustomers[i].getCustomerId() == CustomerId) {
-                return i;
-            }
-        }
-        return -1;
-    }
 
-    public static void deleteCustomerlog(Scanner scanner) {
-        int CustomerId = validator.validateInputInt(scanner, "Nhập vào mã khách hàng cân xóa");
-        int indexDelete = findIndexById(CustomerId);
-        if (indexDelete == -1) {
-            System.err.println("Mã danh mục không tồn tại");
-            return;
-        }
-
-    }
